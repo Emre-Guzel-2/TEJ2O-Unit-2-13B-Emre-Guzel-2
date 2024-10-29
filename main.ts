@@ -2,7 +2,7 @@
  *
  * Created by: Emre Guzel
  * Created on: Oct 29 2024
- * This program counts doen from 0 to 4
+ * This program counts dwon from 0 to 4
 */
 
 // Setting the veribles 
@@ -26,27 +26,28 @@ Leds.show()
 
 input.onButtonPressed(Button.A,function(){
     basic.clearScreen()
-    loopCounter = 0 
+    loopCounter = 4 
     // Setting the loop 
-    while (loopCounter = 0,3){
-        basic.pause(500)
-        if (loopCounter = 0) {
+    while (loopCounter >= 0 ){
+        Leds.setPixelColor(0, neopixel.colors(NeoPixelColors.Black));
+        Leds.setPixelColor(1, neopixel.colors(NeoPixelColors.Black));
+        Leds.setPixelColor(2, neopixel.colors(NeoPixelColors.Black));
+        Leds.setPixelColor(3, neopixel.colors(NeoPixelColors.Black));
+        if (loopCounter > 0) {
             Leds.setPixelColor(0, neopixel.colors(NeoPixelColors.Green));
-            Leds.show()
         }
-         else {
-             loopCounter = 1
+        if (loopCounter > 1) {
             Leds.setPixelColor(1, neopixel.colors(NeoPixelColors.Blue));
-            Leds.show()
         }
-        if(loopCounter = 2){
-            Leds.setPixelColor(1, neopixel.colors(NeoPixelColors.Blue));
-            Leds.show()
+        if(loopCounter > 2){
+            Leds.setPixelColor(2, neopixel.colors(NeoPixelColors.Purple));
         }
-        else{
-            loopCounter = 3
-            Leds.setPixelColor(1, neopixel.colors(NeoPixelColors.Red));
-            Leds.show()
+        if (loopCounter > 3){
+            Leds.setPixelColor(3, neopixel.colors(NeoPixelColors.Red));
         }
-    }  
+        Leds.show()
+        basic.showNumber(loopCounter)  
+        loopCounter--
+        basic.pause(1000)
+    }
 })
