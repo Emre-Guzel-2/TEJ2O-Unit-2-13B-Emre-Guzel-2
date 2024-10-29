@@ -27,5 +27,26 @@ Leds.show()
 input.onButtonPressed(Button.A,function(){
     basic.clearScreen()
     loopCounter = 0 
-
+    // Setting the loop 
+    while (loopCounter = 0,3){
+        basic.pause(500)
+        if (loopCounter = 0) {
+            Leds.setPixelColor(0, neopixel.colors(NeoPixelColors.Green));
+            Leds.show()
+        }
+         else {
+             loopCounter = 1
+            Leds.setPixelColor(1, neopixel.colors(NeoPixelColors.Blue));
+            Leds.show()
+        }
+        if(loopCounter = 2){
+            Leds.setPixelColor(1, neopixel.colors(NeoPixelColors.Blue));
+            Leds.show()
+        }
+        else{
+            loopCounter = 3
+            Leds.setPixelColor(1, neopixel.colors(NeoPixelColors.Red));
+            Leds.show()
+        }
+    }  
 })
