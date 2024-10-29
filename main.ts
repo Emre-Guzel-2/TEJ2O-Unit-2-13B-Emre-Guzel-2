@@ -4,7 +4,7 @@
  * Created on: Oct 29 2024
  * This program counts dwon from 0 to 4
 */
-
+//
 // Setting the veribles 
 let Leds: neopixel.Strip = null
 let loopCounter = 0
