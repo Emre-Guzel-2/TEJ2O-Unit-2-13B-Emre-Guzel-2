@@ -35,16 +35,16 @@ while True:
             leds[3] = (0, 0, 0)
             
             if loop_counter >0:
-                leds[0] = (60, 25, 12)
+                leds[0] = (255, 215, 0)
             
             if loop_counter >1:
-                leds[1] = (255, 100, 80)
+                leds[1] = (218, 112, 114)
             
             if loop_counter >2:
-                leds[2] = (155, 112, 114)
+                leds[2] = (0, 255, 0)
             
             if loop_counter >3:
-                leds[3] = (90, 71, 30)
+                leds[3] = (224, 255, 255)
         
             leds.show()
             display.show(loop_counter)
